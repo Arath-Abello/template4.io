@@ -1,0 +1,304 @@
+/** aqui imoortamos las fuentes sacadas de google fonts (al seleccionar import) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/** aqui pegamos la fuente al body y este la heredera */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+/**Al definir un ancho del 90%, el elemento ocupará el 90% del ancho del elemento contenedor. Esto significa que se adaptará a diferentes tamaños de pantalla, lo que es especialmente útil para dispositivos móviles. Al mismo tiempo, establecer un ancho máximo de 1200px garantiza que el elemento no se extienda demasiado en pantallas grandes, lo que puede hacer que el contenido sea difícil de leer o parecer desordenado.  */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav_link {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    gap: 20px;
+}
+
+.nav_links,
+.nav_title {
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav_img,
+.nav_close {
+    display: none;
+}
+
+.hero_container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-image: url('../img/computer.jpg');
+    background-size: cover;
+    position: relative;
+    top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 85%, 0 80%);
+    gap: 15px;
+    text-align: center;
+}
+
+.hero_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cta {
+    display: block;
+    background-color: #2091F9;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.about {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about_main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.about_icons {
+    flex-basis: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about_icon {
+    width: 50px;
+    margin: 0px auto;
+}
+
+.knowledge,
+.testimony {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+}
+
+.knowledge_content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 80px 0px;
+}
+
+.knowledge_content_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 30%;
+    flex-grow: 1;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.knowledge_content_section .cta {
+    width: max-content;
+}
+
+.knowledge_picture {
+    flex-basis: 30%;
+    flex-grow: 1;
+}
+
+.knowledge_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.testimony {
+    margin-top: 20px;
+    padding: 20px 0px;
+}
+
+.testimony_container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimony_body {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.testimony_body--show {
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony_img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimony_arrow {
+    cursor: pointer;
+}
+
+.footer{
+    background-color: #1D293F;
+}
+
+.footer__title, .footer__newsletter{
+    color: #fff;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 60px;
+}
+
+.nav__link--footer{
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__link--footer .nav__links{
+    color: white;
+    text-decoration: none;
+}
+
+.footer__inputs{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.footer__input{
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+}
+
+.footer__submit{
+    margin-left: auto;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px ;
+    background-color: #2091F9;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.footer__copy{
+    --padding-container: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__copyright{
+    font-weight: 300;
+}
+
+.footer__icons{
+    margin-bottom: 10px;
+}
+
+.footer__img{
+    width: 30px;
+}
+
+@media (max-width: 575.98px) {
+
+    .knowledge_content_section,
+    .knowledge_picture {
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+
+    .testimony_body {
+        grid-template-columns: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav_img {
+        display: block;
+    }
+
+    .nav_link {
+        display: none;
+    }
+
+    .show {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        width: 100%;
+        background-color: #1D293F;
+        text-align: center;
+        line-height: 30px;
+    }
+
+}
