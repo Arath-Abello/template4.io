@@ -299,6 +299,14 @@ body {
         background-color: #1D293F;
         text-align: center;
         line-height: 30px;
+        /*que sea invisible*/
+        opacity: 0;
+        /*luego con la transicion queremos darle a la propiedad opacity de este elemento una suavidad de 0.5 segundos y que sea lento al comienzo y rapido al final*/
+        transition: opacity 0.5s ease-in-out;
     }
 
+    ul.show.active {
+        /*luego ponemos visible el menu cuando hagamos click en el menu hamburguesa*/
+        opacity: 1;
+    }
 }
